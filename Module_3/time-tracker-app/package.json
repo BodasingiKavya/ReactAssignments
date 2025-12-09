@@ -1,0 +1,23 @@
+{
+  "name": "time-tracker-app",
+  "version": "1.0.0",
+  "description": "A modern time tracking web application with Firebase and Chart.js",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "dev": "npx http-server -p 8000"
+  },
+  "keywords": [
+    "time-tracking",
+    "productivity",
+    "firebase",
+    "chartjs",
+    "analytics"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/time-tracker-app.git"
+  }
+}
