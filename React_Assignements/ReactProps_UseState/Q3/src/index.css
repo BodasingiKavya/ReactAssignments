@@ -1,0 +1,13 @@
+.MessageCard{
+      display: flex;
+      flex-direction: column;
+      justify-Content: space-around;
+      border: "1px solid #ccc";
+      padding: "16px";
+      margin: "10px";
+      border-Radius: "8px";
+      width: "250px";
+      align-items: center;
+      background-color: grey;
+      border: "1px solid #ccc"
+}
