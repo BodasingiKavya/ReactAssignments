@@ -24,7 +24,8 @@ body {
 }
 
 .card{
-  padding: 15px;border-radius: 8px;background: white;
+  padding: 15px;border-radius: 8px;background: rgb(138, 185, 239);
+  
 }
 
 .app.dark .card{
@@ -33,6 +34,16 @@ body {
 
 button {
   margin-right :8px;
+}
+
+button.delete{
+  background-color: #cc0a0a;
+  color:#fff;
+}
+
+button.edit{
+  background-color: #ccb20a;
+  color:#fff;
 }
 
 

@@ -25,4 +25,7 @@ export const PostsProvider = ({children})=>{
     )
 }
 
-export const UsePosts = () =>{ return useContext(PostContext)};
+export const UsePosts = () =>{
+    console.log("usePosts", useContext(PostContext));
+    
+    return useContext(PostContext)};

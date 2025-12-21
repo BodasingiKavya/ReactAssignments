@@ -7,7 +7,9 @@ const LayOut =()=>{
   return(
     <div className={`app ${theme}`}>
       {console.log(theme)}
+      <br></br>
       <button onClick={toggleTheme}>Switch Theme</button>
+      <br/><br></br>
       <PostList>    </PostList>
     </div>
   )

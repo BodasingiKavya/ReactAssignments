@@ -25,8 +25,8 @@ return (
                 <>
                 <h3>{posts.title}</h3>
                 <p>{posts.body}</p>
-                <button onClick={()=>setEditing(true)}>Edit</button>
-                <button onClick={()=>deltePost(posts.id)}>Delete</button>
+                <button onClick={()=>setEditing(true)} className="edit">Edit</button>
+                <button onClick={()=>deltePost(posts.id)} className="delete">Delete</button>
                 </>
             )}
         </div>
