@@ -1,4 +1,4 @@
-import { UsePosts } from "./PostContexts";
+import { UsePosts } from "../context/PostContexts";
 
 import { PostCard } from "./PostCard";
 

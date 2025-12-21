@@ -4,11 +4,15 @@ const PostContext = createContext();
 export const PostsProvider = ({children})=>{
     const [posts,setPosts] = useState([]);
     useEffect( ()=>{
+        console.log("useEffect fetching posts");
         fetch("https://jsonplaceholder.typicode.com/posts").then(res => res.json()).then(data=>setPosts(data.slice(0,20)));
+        console.log(posts);
     },[]);
 
     const updatePosts = (id,updatePosts)=>{
+        console.log("updating post",id,updatePosts);
         setPosts(posts.map(p => (p.id === id ? {...p, ...updatePosts}:p)));
+        console.log(posts);
     }
 
     const deletedPosts = (id)=>{
@@ -21,4 +25,4 @@ export const PostsProvider = ({children})=>{
     )
 }
 
-export const UsePosts = () =>{useContext(PostContext)};
+export const UsePosts = () =>{ return useContext(PostContext)};

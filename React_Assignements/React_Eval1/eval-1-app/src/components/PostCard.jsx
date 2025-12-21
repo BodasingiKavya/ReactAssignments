@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { UsePosts } from "./PostContexts"
+import { UsePosts } from "../context/PostContexts"
 
 export const PostCard=({posts})=>{
+    if (!posts) return null;
     const {updatePost,deltePost}=UsePosts();
     const [editing,setEditing]=useState(false);
-    const [title,setTitle]=useState(posts.title);
-    const  [body,setBody]=useState(posts.body);
+    const [title,setTitle]=useState(posts?.title || "");
+    const  [body,setBody]=useState(posts?.body || "");
 
     const handleSave =()=>{updatePost (posts.id ,{title,body});
 setEditing(false)}
@@ -22,10 +23,10 @@ return (
             )
             :(
                 <>
-                <h3>{post.title}</h3>
-                <p>{post.body}</p>
+                <h3>{posts.title}</h3>
+                <p>{posts.body}</p>
                 <button onClick={()=>setEditing(true)}>Edit</button>
-                <button onClick={()=>deltePost(post.id)}>Delete</button>
+                <button onClick={()=>deltePost(posts.id)}>Delete</button>
                 </>
             )}
         </div>

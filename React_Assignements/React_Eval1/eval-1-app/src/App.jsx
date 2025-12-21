@@ -1,20 +1,11 @@
-import { PostsProvider } from "./components/PostContexts";
-import PostList from "./components/PostList";
-import { ThemeProvider, useTheme } from "./context/ThemeContext"
-
-const LayOut =()=>{
-  const {theme,setTheme}=useTheme();
-  return(
-    <div className={theme}>
-      <button onClick={setTheme}>Switch Theme</button>
-      <PostList/>
-    </div>
-  )
-}
+import LayOut from "./components/LayOut";
+import { PostsProvider } from "./context/PostContexts";
+import { ThemeProvider } from "./context/ThemeContext";
 
 export default function App(){
   return (
     <>
+    
       <ThemeProvider>
         <PostsProvider>
           <LayOut/>
